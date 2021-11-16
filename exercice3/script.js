@@ -15,7 +15,12 @@ bouton = document.getElementById('bouton');
 
 function calculBissextile() {
     annee = document.getElementById('annee').value;
-    console.log(annee);
+    resultat = document.getElementById("resultat");
+    if (estBissextile(annee)) {
+        resultat.innerText = "L'année est bien bissextile";
+    } else {
+        resultat.innerText = "L'année n'est pas bissextile";
+    }
 }
 
 bouton.addEventListener('click', calculBissextile);
